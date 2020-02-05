@@ -1,0 +1,51 @@
+.navbar {
+    box-shadow: 2px 2p 5px #000;
+    opacity: .9;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+}
+
+.main-header {
+    background: url(../img/notebook-1280538_1920.jpg);
+    background-size: cover;
+    min-height: 500px;
+}
+
+.main-header-pass {
+    background: url(../img/apple-1841553_1920.jpg);
+    background-size: cover;
+    min-height: 400px;
+}
+
+.main-header-tare{
+    background: url(../img/fondo_tareas.jpg);
+    background-size: cover;
+    min-height:  400px;
+}
+
+.main-header-plan {
+    background: url(../img/cyber-3400789_1920.jpg);
+    background-size: cover;
+    min-height: 400px;
+}
+
+.main-header-carrer {
+    background: url(../img/bookcase-1869616_1920.jpg);
+    background-size: cover;
+    min-height: 400px;
+}
+
+.Amores {
+    background: black /*rgba(179, 57, 57, 1.0);*/
+}
+
+.Amores .card-body {
+    background: rgb(255, 255, 255);
+    /* background:   rgba(255, 82, 82, 1.0); */
+}
+
+.footer {
+    background: black;
+}
