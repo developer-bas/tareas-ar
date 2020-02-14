@@ -7,6 +7,12 @@
     color: white;
 }
 
+#clock {
+    font-size: 5em;
+    text-align: center;
+    margin: 1em;
+  }
+
 .main-header {
     background: url(../img/notebook-1280538_1920.jpg);
     background-size: cover;
