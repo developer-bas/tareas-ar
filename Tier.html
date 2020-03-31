@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <section class="bg-dark text-center">
+        <div class="container text-white">
+            <h1>TIER</h1>
+            <p>El diseño del data center no sólo tiene que ver con su construcción, hardware, software o telecomunicaciones. La infraestructura física del centro de datos la componen una serie de subsistemas como el de climatización o el sistema de protección contra incendios que también deben ser tomados en cuenta, cuando pensamos en su diseño.</p>
+            <p>También debemos tomar en cuenta aspectos como recursos humanos o la capacidad de mantenerse funcionando aunque existan ataques o desastres naturales externos a la empresas.</p>
+            <h2>
+                Clasificación del TIER para diseño de su data center
+                </h2>
+            <p>Podemos clasificar los data center, gracias a los estándares TIA-942 que incluyen información sobre los grados de disponibilidad (TIER).</p>
+            <p>Los Tiers se basan en información desarrollada por el Uptime Institute, un consorcio dedicado a promover las mejores prácticas para la planificación y gestión de centros de datos.</p>
+            <p>Para cada uno de los Tiers que existen se detallan las recomendaciones para la infraestructura de seguridad, eléctrica y mecánica y telecomunicaciones. Cuando mayor Tier disponemos, mayor grado de disponibilidad.</p>
+            <h2>Clasificación Tier</h2>
+        </div>
+        <div>
+            <img src="img/clasificacion-Tier.png" class =" img-fluid  w-140" alt="Clasificación Img">
+        </div>
+    </section>
+
+    <section class="bg-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class=" bg-dark p-5 col-md-6 text-white">
+                    <h2>Tier I: Básico</h2>
+                    <p>Un diseño Tier 1 admite interrupciones planeadas y no planeadas. Disponen de sistemas de aire acondicionado y también de distribución de energía, pero no suelen tener: suelo técnico, UPS o generados eléctricos.</p>
+                    <p>Este sistema puede tener varios puntos de fallo, sobre todo cuando la carga es máxima en situaciones críticas. También puede tener errores de operación o fallos en su infraestructura lo que provoca la interrupción de sus data centers.</p>
+                    <p>Además la infraestructura del data center deberá estar fuera de servicio una vez al año para su mantenimiento o reparación.</p>
+                    <p>La tasa máxima de disponibilidad del CPD es 99.671% del tiempo.</p>
+                </div>
+                <div class=" p-5 col-md-6 ">
+                    <h2>Tier II:  Componentes Redundantes</h2>
+                    <p>Los Data Centers con componentes redundantes son ligeramente menos susceptibles a interrupciones, tanto planeadas como las no planeadas. Estos CPDs cuentan con suelo técnico, UPS y generadores eléctricos, pero está conectado a una sola línea de distribución eléctrica.</p>
+                    <p>Su diseño es (N+1), lo que significa que existe al menos un duplicado de cada componente de la infraestructura. La carga máxima de los sistemas en situaciones críticas es del 100%. El mantenimiento en la línea de distribución eléctrica o en otros componentes de la infraestructura, pueden causar una interrupción del servicio.</p>
+                    <p>La tasa de disponibilidad máxima del CPD es 99.741% del tiempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-center">
+        <div class="container">
+            <div class="row">
+                <div class=" bg-white p-5 col-md-6 ">
+                    <h2>Tier III: Mantenimiento Concurrente</h2>
+                    <p>Las capacidades de su Data Center Tier III, nos permiten realizar cualquier actividad planeada sobre cualquier componente sin tener ninguna interrupción en la operación.</p>
+                    <p>Las actividades planeadas incluyen:</p>
+                    <p>1.- Mantenimiento preventivo</p>
+                    <p>2.- Reparación y reemplazamiento de componentes</p>
+                    <p>3.- Agregar o eliminar los componentes</p>
+                    <p>4.- Realizar pruebas en sistemas o subsistemas.</p>
+                    <p>Si queremos este diseño data center, debe existir la capacidad necesaria y una doble línea de distribución para los componentes. De esta forma es posible realizar pruebas mientras la otra línea atiende la totalidad de la carga.</p>
+                    <p>En el caso de actividades no planeadas como los errores de una operación o fallos espontáneos en la infraestructura pueden causar fallos en su centro de procesamiento de datos. La carga máxima para situaciones críticas es de 90%.</p>
+                    <p>La mayoría de los Data Centers Tier III son diseñados para actualizarse a Tier IV, este cambio se produce cuando aumentan los requerimientos de la empresa.</p>
+                    <p>La tasa máxima de disponibilidad del CPD es 99.982% del tiempo.</p>
+                </div>
+                <div class=" p-5 col-md-6 text-white">
+                    <h2>Tier IV: Tolerante a Fallos</h2>
+                    <p>Un diseño en data center con este nivel proveerá capacidad para realizar cualquier tipo de actividad sin tener interrupciones en el servicio.  Además tiene tolerancia a fallos que le permiten a la infraestructura de su data center a continuar operando ante una actividad no planeada.</p>
+                    <p>Para ello este sistema requiere dos líneas de distribución simultáneamente activas, típicamente en una configuración System+System. La carga máxima en situación crítica es del 90%. Persiste un nivel de exposición a fallos ya que es avisada por una alarma de incendio.</p>
+                    <p>La tasa de disponibilidad máxima del CPD es 99.995% del tiempo.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-center">
+        <div class="container text-white">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R-1P5VmOXos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="card text-center border-dark bg-dark text-white">
+                        <div class="card-body">
+                            <h2>Referencias:</h2>
+                            <p>
+                                [ 1 ] Diseño Data Center y Grados de disponibilidad (Tier). [Online]. Available : https://cliatec.com/diseno-data-center/
+                               
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark">
+        <div class="container p-3 text-white text-center">
+            <p>Copyright Sebas &copy; 2020</p>
+            <p>¿Dudas de mi código? Aqui te lo dejo: https://github.com/developer-bas/tareas-ar </p>
+        </div>
+    </footer>
+
+   
+</body>
+
+
+</html>

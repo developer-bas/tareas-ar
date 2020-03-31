@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Protocolos de ruteo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <section class="bg-white text-center">
+        <div class="container ">
+           <h1>Protcolos de ruteo</h1>
+           <p>Los protocolos de ruteo son los encargados de que cada paquete de Información llegue a su correcto destino. El Ruteo se divide en dos categorías; ruteo interno y ruteo externo cada uno independientemente trabajan con algoritmos distintos.</p>
+            <h2>Protocolo Interior de Gateway (IGP) o IRP</h2>
+            <p>Protocolo usado por los vecinos interiores para intercambiar Información de accesibilidad, las conexiones se realizan en redes de ruteo interno. </p>
+            <h2>Protocolo Exterior de Gateway (EGP) o ERP</h2>
+            <p>Protocolo usado por vecinos exteriores para difundir información de accesibilidad entre otros sistemas autónomos, el intercambio se realiza con otros sistemas autónomos externos conectados a Internet.
+                Protocolo de ruteo: BGP(Border Gateway Protocol) diseñado para permitir la cooperación en el intercambio de información de encaminamiento entre routers en Sistemas Autónomos diferentes.
+                BGp intercambia información de encaminamiento entre sistemas autónomos a la vez que garantiza una elección de rutas libres de bucles. Protocolo principal de publicación de rutas utilizado por las compañías más importantes de ISP en Internet.
+                A diferencia de los protocolos de Gateway internos (IGP), como RIP, OSPF y EIGRP, no usa métricas como número de saltos, ancho de banda, o retardo. En cambio, BGP toma decisiones de encaminamiento basándose en políticas de la red, o reglas que utilizan varios atributos de ruta BGP.</p>
+
+        </div>
+        <div class="container">
+            <img src="img/enrutamiento.jpg" class="img-fluid" alt="enrutamiento img">
+        </div>
+    </section>
+
+
+    <section class="bg-dark text-center">
+        <div class="container text-white">
+           <p>Los protocolos de enrutamiento dinámicos se clasifican en:</p>
+            <p>- Vector Distancia</p>
+            <p>- Estado de Enlace</p>
+            </p>
+            <p>Vector Distancia: Su métrica se basa en lo que se le llama en redes “Número de Saltos”, es decir la cantidad de routers por los que tiene que pasar el paquete para llegar a la red destino, la ruta que tenga el menor número de saltos es la mas optima y la que se publicará.</p>
+            <p>Estado de Enlace: Su métrica se basa el retardo, ancho de banda, carga y confiabilidad de los distintos enlaces posibles para llegar a un destino en base a esos conceptos el protocolo prefiere una ruta por sobre otra. Estos protocolos utilizan un tipo de publicaciones llamadas Publicaciones de estado de enlace (LSA), que intercambian entre los routers, mediante estas publicación cada router crea una base datos de la topología de la red completa.</p>
+            <p>Algunos protocolos de enrutamiento dinámicos son:</p>
+            <p>- RIP : Protocolo de enrutamiento de gateway Interior por vector distancia.</p>
+            <p>- IGRP: Protocolo de enrutamiento de gateway Interior por vector distancia, del cual es propietario CISCO.
+            </p>
+            <p>- EIGRP: Protocolo de enrutamiento de gateway Interior por vector distancia, es una versión mejorada de IGRP.</p>
+            <p>- OSPF: Protocolo de enrutamiento de gateway Interior por estado de enlace.</p>
+            <p>- BGP: Protocolo de enrutamiento de gateway exterior por vector distancia.</p>
+            <p>El concepto de Gateway Interior o Exterior, se refiere a que si opera dentro de un sistema Autónomo o fuera de el. Un sistema Autónomo, puede ser una organización que tiene el todo el control de su red, a estos sistemas autónomos se le asigna un número de Identificación por el ARIN (Registro Estadounidense de números de Internet), o por un proveedor de servicios. Los protocolos de enrutamiento como IGRP y EIGRP, necesitan de este número al momento de configurarse.</p>
+            <p>El protocolo BGP es de gateway exterior, es decir se encuentra fuera de los sistemas autónomos, generalmente entre los que se les llama routers fronterizos entre ISP’s, o entre una compañía y un ISP, o entre redes que interconectan países.</p>
+
+
+        </div>
+    </section>
+
+    <section class="bg-white text-center">
+        <div class="container ">
+           <h2>OSPF</h2>
+           <p>OSPF(Open Shortest Path First): Utiliza el algoritmo de Dijkstra para calcular la ruta más corta. Es el más utilizado en redes grandes, pues se puede descomponer en otras más pequeñas para facilitar la configuración. Una red OSPF está dividida en grupos lógicos de encaminadores o áreas cuya información se puede resumir para el resto de la red. Se basa en las normas de código abierto, lo que significa que muchos fabricantes lo pueden desarrollar y mejorar. 
+            Open Shortest Path First (OSPF) es un protocolo de direccionamiento de tipo enlace-estado, desarrollado para las redes IP y basado en el algoritmo de primera vía más corta (SPF). OSPF es un protocolo de pasarela interior (IGP).
+            </p>
+            <p>En una red OSPF, los direccionadores o sistemas de la misma área mantienen una base de datos de enlace-estado idéntica que describe la topología del área. Cada direccionador o sistema del área genera su propia base de datos de enlace-estado a partir de los anuncios de enlace-estado (LSA) que recibe de los demás direccionadores o sistemas de la misma área y de los LSA que él mismo genera. El LSA es un paquete que contiene información sobre los vecinos y los costes de cada vía. Basándose en la base de datos de enlace-estado, cada direccionador o sistema calcula un árbol de extensión de vía más corta, siendo él mismo la raíz, utilizando el algoritmo SPF.</p>
+            <p>Las ventajas principales de OSPF son las siguientes:</p>
+            <p>En comparación con los protocolos de direccionamiento de distancia-vector como el protocolo de información de direccionamiento (RIP), OSPF es más adecuado para servir entre redes heterogéneas de gran tamaño. OSPF puede recalcular las rutas en muy poco tiempo cuando cambia la topología de la red.</p>
+            <p>Con OSPF, puede dividir un sistema autónomo (AS) en áreas y mantenerlas separadas para disminuir el tráfico de direccionamiento de OSPF y el tamaño de la base de datos de enlace-estado de cada área.</p>
+            <p>OSPF proporciona un direccionamiento multivía de coste equivalente. Se pueden añadir rutas duplicadas a la pila TCP utilizando saltos siguientes distintos.</p>
+
+        </div>
+    </section>
+
+    <section class="bg-dark text-center">
+        <div class="container text-white">
+            <h2>RIP</h2>
+            <p>Protocolo de información de direccionamiento (RIP) es un protocolo de direccionamiento de vectores de distancia. Los direccionadores que ejecutan el protocolo de vectores de distancia envían toda o una parte de sus tablas de direccionamiento en mensajes de actualización de direccionamiento a sus vecinos.</p>
+            <p>Se puede utilizar RIP para configurar los sistemas principales como parte de una red RIP. Este tipo de direccionamiento no requiere apenas mantenimiento y, además, reconfigura automáticamente las tablas de direccionamiento cuando la red cambia o la comunicación de red se detiene. Se ha añadido RIPv2 al producto System i con el fin de que se puedan enviar y recibir paquetes RIP para actualizar las rutas en toda la red.</p>
+            
+        </div>
+
+    </section>
+
+    <section class="bg-white text-center">
+        <div class="container ">
+            <h2>IGRP</h2>
+            <p>El protocolo IGRP permite que varios gatewayes coordinen su encaminamiento. Las metas son las siguientes:</p>
+            <p>Ruteo estable aún en redes muy grandes o complejas. Ningunos loopes de la encaminamiento deben ocurrir, incluso durante los transeúntes.</p>
+            <p>Respuesta rápida a los cambios en la topología de la red</p>
+            <p>Tara baja. Es decir, IGRP en sí no debe usar más banda ancha de la que necesita realmente para realizar su tarea.</p>
+            <p>La división de tráfico entre varias rutas paralelas cuando son de conveniencia apenas similar.</p>
+            <p>Tener en cuenta las tasas de errores y el nivel de tráfico en distintos trayectos.</p>
+            <p>En tal protocolo, los gatewayes intercambian la información de ruteo solamente por los gatewayes adyacentes. Esta información de ruteo contiene un resumen de información sobre el resto de la red. Puede ser mostrado matemáticamente que todos los gatewayes tomados juntos están solucionando un problema de optimización por qué cantidades a un algoritmo distribuido. Cada gateway sólo debe resolver parte del problema y sólo debe recibir una porción del total de los datos.</p>
+            <p>IGRP está destinado para usarse en gateways que conectan varias redes. Asumimos que las redes utilizan la tecnología del paquete basado. En efecto, los gateways actúan como switches de paquete. Cuando un sistema conectado a una red desea enviar un paquete a un sistema de una red diferente, dirige el paquete a una gateway. Si el destino está en una de las redes conectadas a la gateway, ésta enviará el paquete al destino. Si el destino es más distante, el gateway remitirá el paquete a otro gateway que esté más cercano al destino. Tablas de ruteo del uso de los gatewayes para ayudarles a decidir qué hacer con los paquetes.</p>
+            <p>Nota: Deje la palabra “gatewayes” así pues Cisco los escribe de esa forma ...</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="card text-center border-dark bg-dark text-white">
+                        <div class="card-body">
+                            <h2>Referencias:</h2>
+                            <p>
+                                Protocolos de ruteo [Online]. Available :  https://www.ecured.cu/Protocolos_de_ruteo
+                            </p>
+                            <p>
+                                Protocolos de enrutamiento vector distancia [Online]. Available : 
+                                https://sites.google.com/site/redescisco2/protocolos-de-enrutamiento-vector-distancia
+
+                            </p>
+                            <p>OSPF (Open Shortest Path First) [Online]. Available : 
+                                https://www.ibm.com/support/knowledgecenter/es/ssw_ibm_i_71/rzajw/rzajwospf.htm
+                            </p>
+                            <p>
+                                Protocolo de información de direccionamiento [Online]. Available : https://www.ibm.com/support/knowledgecenter/es/ssw_ibm_i_71/rzajw/rzajwrip.htm
+                            </p>
+                            <p>
+                                Introducción a IGRP [Online]. Available : 
+                            https://www.cisco.com/c/es_mx/support/docs/ip/interior-gateway-routing-protocol-igrp/26825-5.html
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark">
+        <div class="container p-3 text-white text-center">
+            <p>Copyright Sebas &copy; 2020</p>
+            <p>¿Dudas de mi código? Aqui te lo dejo: https://github.com/developer-bas/tareas-ar </p>
+        </div>
+    </footer>
+
+   
+</body>
+
+
+</html>

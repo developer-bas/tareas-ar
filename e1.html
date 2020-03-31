@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E1 </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <section class="bg-dark text-center">
+        <div class="container text-white">
+           <h1> E1 </h1>
+           <h3>T1/E1 - IBM</h3>
+           <p>
+            Una conexión T1 es un paquete compuesto por 24 canales de multiplexado por división de tiempo (TDM) de 64 kbps (DS0) a través de circuito de cobre de cuatro hilos. Esto crea un ancho de banda total de 1.544 mbps. En Europa y en otras partes del mundo, un circuito E1 es un paquete compuesto por 32 canales de 64 kbps, dando un total de 2.048 mbps. TDM permite que múltiples usuarios compartan un medio de transmisión digital al utilizar ubicaciones en el tiempo preasignadas. Muchas centralitas privadas (PBX) digitales sacan partido del servicio T1 para importar múltiples circuitos de llamada a través de una sola línea T1, en vez de tener 24 pares de hilos direccionados entre la centralita privada (PBX) y la compañía telefónica.
+           </p>
+           <p>Es importante darse cuenta de que T1 se puede compartir entre voz y datos. Por ejemplo, un servicio telefónico puede venir a través de un subconjunto de 24 canales de un enlace T1, dejando los demás canales para la conectividad de Internet. Se necesita un dispositivo multiplexor T1 para gestionar los 24 canales DS0 cuando se comparte un tronco T1 entre múltiples servicios. En el caso de una conexión individual solo de datos, el circuito se puede ejecutar sin canalizar (no se realiza TDM en la señal). Por ello, se puede emplear un dispositivo de unidad de servicios de canal/unidad de servicios de datos (CSU/DSU) más simple. En general, podrá conectarse a una CSU/DSU de T1/E1 o a un multiplexor a través de una interfaz serie V.35 o RS 449 con protocolo síncrono a velocidades múltiplos de 64 kbps que llegan a alcanzar 1.544 mbps o 2.048 mbps. La CSU/DSU o el multiplexor proporciona el cronometraje de la red.</p>
+        </div>
+        <div  class="container text-white">
+            <h3>E1 - Movistar</h3>
+            <p>es un servicio dedicado de telefonía digital que cuenta con una capacidad de 30 canales de voz, que permiten un máximo de 30 llamadas simultáneas (salientes y/o entrantes). Está diseñado para cubrir la necesidad de tener contratadas varias líneas telefónicas y manejar un alto volumen de llamadas. Contratar el servicio de E1 le permitirá gozar de un ahorro sustancial en su factura de telefonía fija.</p>
+            <h4>Conozca las funcionalidades de Telefonía Fija Corporativa E1</h4>
+            <p>Diferenciador: El E1 consiste en una línea digital ISDN que le permite tener acceso telefónico de alta capacidad (2 MBPs)</p>
+            <p>Línea Digital: Lleva hasta el domicilio de su empresa 30 canales telefónicos de 64 MBPS cada uno</p>
+            <p>Extensiones: Podrá habilitar 100 o más extensiones digitales lo cual le permite tener flexibilidad y acompaña su crecimiento</p>
+            <p>Canales: Los 30 canales de acceso del E1 son compartidos por todos los números telefónicos asignados al mismo, por lo que todas las llamadas entrantes o salientes podrán ser atendidas
+            </p>
+            <p>Acceso directo: Se tendrá acceso directo desde el exterior a cada una de las extensiones por medio de un número telefónico DID (Direct – Inward – Dialing)</p>
+        </div>
+    </section>
+
+    <section class="text-center">
+        <div class="container">
+            <h3>Estructura</h3>
+            <p>La estructura de multiplexación superior a los 64K o DS0 es la trama E1 que es, además, la unidad básica de las redes PDH y SDH.
+                Una trama E1 es básicamente un flujo compuesto por 32 flujos de 64K, por tanto, un flujo de 32 x 64K = 2048K o comúnmente conocido como 2M. Cada intervalo de 64K se denomina timeslot o TS. Cada TS está compuesto por 8 bits consecutivos, de forma que la trama está compuesta por 32 x 8 = 256 bits. Como la velocidad agregada es de 2048Kbps, la duración de la trama es de 125 microsegundos.
+                </p>
+        </div>
+        <div class="container">
+            <img src="img/E-esructure.png" class="img-fluid" alt="Estructure img">
+        </div>
+        <div class="container">
+            <p>El problema es que si transmitimos 32 TS uno detrás de otro, no tenemos forma de saber dónde empieza un TS y acaba el anterior o lo que es lo mismo, dónde empieza una señal de telefonía que debemos decodificar (tendremos que reconstruir el nivel de señal a través del valor de los 8 bits de la muestra). Debemos, por tanto, indicar de alguna manera dónde empieza cada trama y para ello usamos el TS0 o alineamiento de trama que tiene un patrón de bits definido y no replicable en el resto de TS (véase figura anterior). </p>
+        </div>
+    </section>
+
+    <section class="bg-dark text-center">
+        <div class="container text-white">
+            <h2>Proveedores </h2>
+            <h4>TELMEX</h4>
+            <img src="img/tarifas.png" class="img-fluid" alt="tarifas img">
+
+        </div>
+
+
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="card text-center border-dark bg-dark text-white">
+                        <div class="card-body">
+                            <h2>Referencias:</h2>
+                            <p>
+                                José Ramón Salvador “Estructura de la trama E1” [Online]. Available : https://blog.davantel.com/estructura-de-la-trama-e1-los-miercoles-de-tecnologia-post-2
+                               
+                            </p>
+                            <p>Conexiones T1/E1 y T1 fraccionaria [Online]. Available : https://www.ibm.com/support/knowledgecenter/es/ssw_ibm_i_71/rzaiy/rzaiytone.htm</p>
+                            <p>
+                                TELEFONÍA FIJA CORPORATIVA E1 [Online]. Available :
+                                https://www.movistar.com.sv/web/empresas/productos-y-servicios/fijo/telefonia-fija-corporativa-e1 
+                                </p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark">
+        <div class="container p-3 text-white text-center">
+            <p>Copyright Sebas &copy; 2020</p>
+            <p>¿Dudas de mi código? Aqui te lo dejo: https://github.com/developer-bas/tareas-ar </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
